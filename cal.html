@@ -12,8 +12,10 @@
             var reason = document.getElementById("reason");
             var amount_of_month_for_year = document.getElementById("amount_of_month");
             var divOutput = document.getElementById("divOutput");
-            var result = (amount_of_money_per_month.value * amount_of_years.value * 12* 100 * reason.value)/(amount_of_month_for_year.value)
-            divOutput.innerHTML += "Result:"+result;
+            var result = (amount_of_money_per_month.value * amount_of_years.value * 12 * 100 * reason.value) / (amount_of_month_for_year.value)
+            divOutput.innerHTML = "";
+            divOutput.innerHTML += "Result:" + result;
+
         }</script>
 </head>
 <body>
@@ -28,7 +30,7 @@
             </select>
             <div class="row">
 
-                <div class="col-lg-6" >
+                <div class="col-lg-6">
                     <p>kancha jylga strahovka</p>
                     <select class="form-select mt-3" id="amount_of_years">
                         <option value=1>1 jyl</option>
@@ -36,7 +38,7 @@
                         <option value=5>5 jyl</option>
                     </select>
                 </div>
-                <div class="col-lg-6" >
+                <div class="col-lg-6">
                     <p>kancha aida bir toloisuz</p>
                     <select class="form-select mt-3" id="amount_of_month">
                         <option value=1>1</option>
@@ -58,13 +60,13 @@
                             onclick="calculate()">esepte
                     </button>
                 </div>
+
+                <div class="container mt-5" style="background-color: gray; border-radius:45px ;text-align:center" id="divOutput">
+                </div>
+
             </div>
             <p>.</p>
-
         </form>
-    </div>
-    <div id="divOutput">
-
     </div>
 </body>
 </html>
